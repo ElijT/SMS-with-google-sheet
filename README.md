@@ -38,6 +38,7 @@ updater: Update Gg to indicate SMS_sent value
 ## HTML interface
 The Web interface from the AppInventor is somewhat limited so I am serving a fully structured HTML/CSS file, limited javascript on the page and no AJAX, button in the html (no need for it either).
 
+
 ## Project structure
 
 ### GAS server
@@ -49,6 +50,12 @@ The Web interface from the AppInventor is somewhat limited so I am serving a ful
 The project must be published and cannot be accessed by the Android App easily by '.../XXXX-ScriptID'/dev' which requires auth. The dev url might still be useful to debug with your browser! 
 
 ## AppInventor project
-I will consider publishing it to the gallery if there is some interest.
+The project is published into AppInventor Gallery here : [(Send SMS Gallery App)](ai2.appinventor.mit.edu/?galleryId=5506738923372544)
 There one screen and beyond the web interface, very similar to original Amit's work. Please see his tutorial for reference.
+
+You will need to update two global values ONLY to get to work: The script url from your Apps Script and your token.
+```sh
+GAS_URL: https://script.google.com/macros/s/'XXXX-ScriptID'/exec
+GG_TOKEN : Unique value hard coded in GAS and android app. 25+ Alphanumeric characters seems fit.
+```
 
