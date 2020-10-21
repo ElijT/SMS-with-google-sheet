@@ -1,7 +1,6 @@
 const SHEET_URL = "UPDATEHERE-Google Sheet URL";
 const TOKEN_ID = "UPDATEHERE-Token value - Only alphanumeric character that can go in a URL";
 const SHEET_NAME = "SMS";
-
 function doGet(e) {
   if (e.parameter.token == TOKEN_ID) {
     
@@ -10,10 +9,10 @@ function doGet(e) {
     if (e.parameter.data == "load") {
           return LoadData();
       
-    } else if (e.parameter.update == "true"){
+    } else if (e.parameter.data == "update"){
           return UpdateStatus(e.parameter.row);
       
-    } else if (e.parameter.display == "true"){
+    } else if (e.parameter.data == "display"){
           return ServeWebPage();
       
     } else {
